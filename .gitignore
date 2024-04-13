@@ -1,0 +1,13 @@
+.idea/
+cmake-build-debug/
+.DS_Store
+.obsidian
+TODO.md
+bilibili/
+secret/
+__pycache__/
+cMcPAT/
+gem5/
+other/
+parsec-image/
+out/
