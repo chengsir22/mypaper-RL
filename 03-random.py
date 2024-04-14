@@ -13,7 +13,7 @@ class Random():
         # init 设计空间
         self.space = space.create_space()
         
-        self.train_eps = 1
+        self.train_eps = 500
         
     def choose_action(self,dimension_index):
         scale = self.space.dimension_box[dimension_index].scale
