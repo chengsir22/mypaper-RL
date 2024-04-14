@@ -8,14 +8,12 @@ import os
 
 # test评估模块 
 os.system("python3 ./02-test-evaluation.py")
-# 评估模块plus  
-# os.system("python ./03-multiprocessing_sim.py")
+
+# random
+# os.system("python3 ./03-random.py")
 
 # reinforce
 # os.system("python ./04-REINFORCE.py")
-
-# random
-# os.system("python ./06-random.py")
 
 # reinforce
 # os.system("python ./08-reinforce-ljf.py")

@@ -1,6 +1,9 @@
 from gem5_mcpat_evaluation import evaluation
-import os
-import multiprocessing
+import utils
+
+log_file = f"./out/log/02_random.log"
+global logger
+logger = utils.setup_logger(log_file=log_file)
 
 checkdict = dict()
 checkdict['core']=4
@@ -17,6 +20,7 @@ metrics=evaluation(checkdict)
 print(metrics)
 print("02-test-evaluation success")
 
+# 4,8,8,8,2,2,2,2.8,0.00019,57.049,7.896
 
 # core（核心数）:
 

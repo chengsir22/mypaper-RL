@@ -50,15 +50,15 @@ def run_mcpat(config):
     except Exception as e:
         logger.warning(f"Error during McPAT execution: {e}")
         return None
-    finally:
-        # clear
-        for path in [f"./out/simout/3.txt", f"./out/simout/test2.log", f"./out/simout/test.xml"]:
-            if os.path.exists(path):
-                os.remove(path) 
+    # finally:
+    #     # clear
+    #     for path in [f"./out/simout/3.txt", f"./out/simout/test2.log", f"./out/simout/test.xml"]:
+    #         if os.path.exists(path):
+    #             os.remove(path) 
 
 def evaluation(status):
     global logger
-    logger = logging.getLogger(f"logger")
+    logger = logging.getLogger("logger")
     config = get_system_config(status)
     for key, value in config.items():
         logger.info(f"{key}: {value}")
