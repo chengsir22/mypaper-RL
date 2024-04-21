@@ -1,0 +1,86 @@
+2024-04-21 17:51:56,659 [space.py:30] INFO name : core , default_value : 1 , step : 1 , rrange : [1, 16]
+2024-04-21 17:51:56,659 [space.py:31] INFO sample_box : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:51:56,659 [space.py:30] INFO name : l1i_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:51:56,659 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:51:56,659 [space.py:30] INFO name : l1d_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:51:56,660 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:51:56,660 [space.py:30] INFO name : l2_size , default_value : 6 , step : 1 , rrange : [6, 16]
+2024-04-21 17:51:56,660 [space.py:31] INFO sample_box : [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:51:56,660 [space.py:30] INFO name : l1d_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:51:56,660 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:51:56,660 [space.py:30] INFO name : l1i_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:51:56,660 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:51:56,660 [space.py:30] INFO name : l2_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:51:56,660 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:51:56,660 [space.py:30] INFO name : sys_clock , default_value : 2 , step : 0.1 , rrange : [2, 4]
+2024-04-21 17:51:56,660 [space.py:31] INFO sample_box : [2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9]
+2024-04-21 17:54:37,161 [space.py:30] INFO name : core , default_value : 1 , step : 1 , rrange : [1, 16]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:54:37,162 [space.py:30] INFO name : l1i_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:54:37,162 [space.py:30] INFO name : l1d_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:54:37,162 [space.py:30] INFO name : l2_size , default_value : 6 , step : 1 , rrange : [6, 16]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:54:37,162 [space.py:30] INFO name : l1d_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:54:37,162 [space.py:30] INFO name : l1i_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:54:37,162 [space.py:30] INFO name : l2_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:54:37,162 [space.py:30] INFO name : sys_clock , default_value : 2 , step : 0.1 , rrange : [2, 4]
+2024-04-21 17:54:37,162 [space.py:31] INFO sample_box : [2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9]
+2024-04-21 17:55:34,114 [space.py:30] INFO name : core , default_value : 1 , step : 1 , rrange : [1, 16]
+2024-04-21 17:55:34,115 [space.py:31] INFO sample_box : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:55:34,115 [space.py:30] INFO name : l1i_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:55:34,115 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:55:34,115 [space.py:30] INFO name : l1d_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:55:34,115 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:55:34,115 [space.py:30] INFO name : l2_size , default_value : 6 , step : 1 , rrange : [6, 16]
+2024-04-21 17:55:34,115 [space.py:31] INFO sample_box : [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:55:34,115 [space.py:30] INFO name : l1d_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:55:34,115 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:55:34,115 [space.py:30] INFO name : l1i_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:55:34,115 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:55:34,116 [space.py:30] INFO name : l2_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:55:34,116 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:55:34,116 [space.py:30] INFO name : sys_clock , default_value : 2 , step : 0.1 , rrange : [2, 4]
+2024-04-21 17:55:34,116 [space.py:31] INFO sample_box : [2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9]
+2024-04-21 17:55:34,273 [04_reinforce.py:65] INFO Episode: 1
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO core: 11
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO l1i_size: 256
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO l1d_size: 128
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO l2_size: 128
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO l1d_assoc: 4
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO l1i_assoc: 16
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO l2_assoc: 2
+2024-04-21 17:55:34,622 [gem5_mcpat_evaluation.py:64] INFO sys_clock: 2.5
+2024-04-21 17:55:34,694 [gem5_mcpat_evaluation.py:77] WARNING No matching row found. so let's start Gem5 simulator
+2024-04-21 17:55:34,694 [gem5_mcpat_evaluation.py:79] INFO +++++++++++  start Gem5 simulator +++++++++++
+2024-04-21 17:57:46,214 [space.py:30] INFO name : core , default_value : 1 , step : 1 , rrange : [1, 16]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:57:46,215 [space.py:30] INFO name : l1i_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:57:46,215 [space.py:30] INFO name : l1d_size , default_value : 2 , step : 1 , rrange : [2, 10]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [2, 3, 4, 5, 6, 7, 8, 9, 10]
+2024-04-21 17:57:46,215 [space.py:30] INFO name : l2_size , default_value : 6 , step : 1 , rrange : [6, 16]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+2024-04-21 17:57:46,215 [space.py:30] INFO name : l1d_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:57:46,215 [space.py:30] INFO name : l1i_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:57:46,215 [space.py:30] INFO name : l2_assoc , default_value : 1 , step : 1 , rrange : [1, 4]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [1, 2, 3, 4]
+2024-04-21 17:57:46,215 [space.py:30] INFO name : sys_clock , default_value : 2 , step : 0.1 , rrange : [2, 4]
+2024-04-21 17:57:46,215 [space.py:31] INFO sample_box : [2, 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7, 2.8, 2.9, 3, 3.1, 3.2, 3.3, 3.4, 3.5, 3.6, 3.7, 3.8, 3.9]
+2024-04-21 17:57:47,172 [04_reinforce.py:65] INFO Episode: 1
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO core: 11
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO l1i_size: 256
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO l1d_size: 128
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO l2_size: 128
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO l1d_assoc: 4
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO l1i_assoc: 16
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO l2_assoc: 2
+2024-04-21 17:57:47,736 [gem5_mcpat_evaluation.py:64] INFO sys_clock: 2.5
+2024-04-21 17:57:47,844 [gem5_mcpat_evaluation.py:77] WARNING No matching row found. so let's start Gem5 simulator
+2024-04-21 17:57:47,844 [gem5_mcpat_evaluation.py:79] INFO +++++++++++  start Gem5 simulator +++++++++++

@@ -10,10 +10,10 @@ import os
 # os.system("python3 ./02-test-evaluation.py")
 
 # random
-os.system("python3 ./03-random.py")
+# os.system("python3 ./03-random.py")
 
 # reinforce
-# os.system("python ./04-REINFORCE.py")
+os.system("python3 ./04_reinforce.py")
 
 # reinforce
 # os.system("python ./08-reinforce-ljf.py")

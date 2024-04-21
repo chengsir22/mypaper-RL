@@ -2,6 +2,7 @@ from math import prod
 
 class Constraint():
     def __init__(self,name,threshold,threshold_ratio):
+        assert threshold > 0
         self.name =name
         self.threshold = threshold
         self.threshold_ratio = threshold_ratio
@@ -15,7 +16,7 @@ class Constraint():
     
     @property
     def punishment(self):
-        return (self.value / self.threshold) ** (self.threshold_ratio if not self.is_meet_flag else 0)
+        return (self.value / self.threshold) ** (self.threshold_ratio if self.is_meet_flag else 0)
 
     def update(self, value):
         self.value = value
@@ -39,7 +40,7 @@ class Constraints():
         
         for key,value,constraint in zip(values.keys(), values.values(), self.constraints):
             if key!=constraint.name:
-                raise ValueError(f"Key '{key}' does not match constraint name '{constraint.get_name()}'.")
+                raise ValueError(f"Key '{key}' does not match constraint name '{constraint.name}'.")
             constraint.update(value)
 
     def get_margin(self, name):
