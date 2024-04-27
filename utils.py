@@ -37,4 +37,4 @@ def states_normalize(space:DesignSpace, states=None):
     return res
         
 def dict_to_tensor(states):
-    return torch.tensor([value for value in states.values()],dtype=torch.float32)
+    return torch.tensor([[value for value in states.values()]],dtype=torch.float)

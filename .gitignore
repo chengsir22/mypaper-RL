@@ -11,4 +11,4 @@ gem5/
 other/
 parsec-image/
 m5out/
-*out/simout
+out/simout/

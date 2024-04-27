@@ -3,8 +3,13 @@ gem5 is copyrighted software; use the --copyright option for details.
 
 gem5 version 23.0.1.0
 gem5 compiled Sep 26 2023 11:50:31
-gem5 started Apr 21 2024 17:57:49
-gem5 executing on master, pid 1975
-command line: ./gem5/build/X86/gem5.fast -d out/simout -re ./gem5/configs/deprecated/example/fs.py --script=./parsec-image/benchmark_src/canneal_11c_simdev.rcS -F 5000000000 --cpu-type=TimingSimpleCPU --num-cpus=11 --sys-clock=2.5GHz --caches --l2cache --l1d_size=128kB --l1i_size=256kB --l2_size=128kB --l1d_assoc=4 --l1i_assoc=16 --l2_assoc=2 --kernel=./parsec-image/system/binaries/x86_64-vmlinux-2.6.28.4-smp --disk-image=./parsec-image/system/disks/x86root-parsec.img
+gem5 started Apr 22 2024 00:35:27
+gem5 executing on Lenovo, pid 454445
+command line: ./gem5/build/X86/gem5.fast -d out/simout -re ./gem5/configs/deprecated/example/fs.py --script=./parsec-image/benchmark_src/canneal_3c_simdev.rcS -F 5000000000 --cpu-type=TimingSimpleCPU --num-cpus=3 --sys-clock=3.3GHz --caches --l2cache --l1d_size=32kB --l1i_size=128kB --l2_size=64kB --l1d_assoc=4 --l1i_assoc=16 --l2_assoc=2 --kernel=./parsec-image/system/binaries/x86_64-vmlinux-2.6.28.4-smp --disk-image=./parsec-image/system/disks/x86root-parsec.img
 
 Global frequency set at 1000000000000 ticks per second
+Switch at instruction count:5000000000
+Switched CPUS @ tick 4790580945000
+switching cpus
+**** REAL SIMULATION ****
+Exiting @ tick 4791702584500 because m5_exit instruction encountered

@@ -17,7 +17,7 @@ class mlp_policyNet(torch.nn.Module):
     def forward(self, input, dimension_index):
         dimension_index_normalize = dimension_index / self.space_length
         x = torch.cat(
-            (input, torch.tensor(dimension_index_normalize).float().view(1)),
+            (input, torch.tensor(dimension_index_normalize).float().view(-1,1)),
             dim = -1,
         )
         x1 = torch.relu(self.fc1(x))
@@ -50,8 +50,8 @@ class Reinforce():
         self.gamma = 0.98
         self.optimizer = torch.optim.Adam(self.plicy_net.parameters(), lr=0.001)
         
-        # self.train_eps = 500
-        self.train_eps = 1
+        self.train_eps = 500
+        # self.train_eps = 1
         
     def take_action(self, dimension_index):
         states_normalize = utils.states_normalize(self.space)
@@ -66,10 +66,10 @@ class Reinforce():
             self.space.states_reset()
             
             reward_list = list()
-            state_list = list()
+            states_list = list()
             action_list =list()
             
-            state = self.space.states
+            states = self.space.states
             
             for dimension_index in range(self.space.len):
                 action = self.take_action(dimension_index)
@@ -86,16 +86,16 @@ class Reinforce():
                         reward = 1000/(metrics["latency"]*metrics["area"]*metrics["power"]*self.constraints.get_punishment())
                 reward_list.append(reward)
                 action_list.append(action)
-                state_list.append(state)
-                state = next_states
+                states_list.append(states)
+                states = next_states
             
             G = 0
             self.optimizer.zero_grad()
             for i in reversed(range(len(reward_list))):
                 reward = reward_list[i]
-                state = torch.tensor([state_list[i]],dtype=torch.float).to(self.device)
-                action = torch.tensor([action_list[i]]).view(-1,1).to(self.device)
-                log_prob = torch.log(self.plicy_net(state,i).gather(1,action))
+                states = utils.dict_to_tensor(utils.states_normalize(self.space,states_list[i]))
+                action = torch.tensor(action_list[i]).view(-1,1).to(self.device)
+                log_prob = torch.log(self.plicy_net(states,i).gather(1,action))
                 G=self.gamma*G+reward
                 loss = -log_prob*G
                 loss.backward()
