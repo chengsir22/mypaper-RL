@@ -1,21 +1,21 @@
 from gem5_mcpat_evaluation import evaluation
 import utils
 
-log_file = f"./out/log/02_random.log"
-global logger
-logger = utils.setup_logger(log_file=log_file)
+log_file = f"./out/log/02_test_evaluation.log"
+
+logger = utils.init_logger(log_file=log_file)
 
 checkdict = dict()
-checkdict['core']=4
-checkdict['l1i_size']=8
-checkdict['l1d_size']=8
-checkdict['l2_size']=8
-checkdict['l1d_assoc']=2
-checkdict['l1i_assoc']=2
-checkdict['l2_assoc']=2
-checkdict['sys_clock']=2.8
+checkdict['core'] = 4
+checkdict['l1i_size'] = 8
+checkdict['l1d_size'] = 8
+checkdict['l2_size'] = 8
+checkdict['l1d_assoc'] = 2
+checkdict['l1i_assoc'] = 2
+checkdict['l2_assoc'] = 2
+checkdict['sys_clock'] = 2.8
 
-metrics=evaluation(checkdict)
+metrics = evaluation(checkdict)
 
 print(metrics)
 print("02-test-evaluation success")

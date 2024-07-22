@@ -69,7 +69,7 @@ class DesignSpace:
             item.reset()
             
     def sample_one_dimension(self, dimension_index, sample_index):
-        assert dimension_index >= 0 and dimension_index <= self.len - 1,"dimension_index error"
+        assert 0 <= dimension_index <= self.len - 1, "dimension_index error"
         self.dimension_box[dimension_index].sample(sample_index)
         return self.states
     
