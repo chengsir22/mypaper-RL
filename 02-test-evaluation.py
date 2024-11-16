@@ -1,9 +1,8 @@
-from gem5_mcpat_evaluation import evaluation
-import utils
+from utils import *
 
 log_file = f"./out/log/02_test_evaluation.log"
 
-logger = utils.init_logger(log_file=log_file)
+logger = get_logger(log_file=log_file)
 
 checkdict = dict()
 checkdict['core'] = 4

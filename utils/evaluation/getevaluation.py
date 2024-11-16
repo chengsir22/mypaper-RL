@@ -48,7 +48,7 @@ class parser:
 
     def dprint(this, astr):
         if this.debug:
-            print (this.name, astr)
+            print(this.name, astr)
 
     def __init__(this, data_in):
         this.debug = False
@@ -104,31 +104,31 @@ class parser:
 
 
 # runs McPAT and gives you the total energy in mJs
-def getevaluation(index_1_mcpat,index_2_gem5):
-    energy,runtime,area,power= getEnergy(index_1_mcpat, index_2_gem5)
+def getevaluation(index_1_mcpat, index_2_gem5):
+    energy, runtime, area, power = getEnergy(index_1_mcpat, index_2_gem5)
 
     metrics = {
-                'latency':runtime, # unit: sec
-                'area':area,      # mm^2
-                'energy':energy, # unit: mJ
-                'power':power  # W              
-            }
+        'latency': runtime,  # unit: sec
+        'area': area,  # mm^2
+        'energy': energy,  # unit: mJ
+        'power': power  # W
+    }
 
     # print ("energy is %f mJ" % energy)
     return metrics
 
 
 def getEnergy(mcpatoutputFile, statsFile):
-    leakage, dynamic,Aera= readMcPAT(mcpatoutputFile)
+    leakage, dynamic, Aera = readMcPAT(mcpatoutputFile)
     runtime = getTimefromStats(statsFile)
     energy = (leakage + dynamic) * runtime
     # print ("leakage: %f W, dynamic: %f W ,area: %f mm^2 and runtime: %f sec" % (leakage, dynamic,area,runtime))
 
-    return energy * 1000,runtime,Aera,(leakage+dynamic)
+    return energy * 1000, runtime, Aera, (leakage + dynamic)
 
 
 def readMcPAT(mcpatoutputFile):
-    print ("Reading simulation time from: %s" % mcpatoutputFile)
+    print("Reading simulation time from: %s" % mcpatoutputFile)
     p = parser(mcpatoutputFile)
 
     leakage = p.getValue(['Processor:', 'Total Leakage'])
@@ -138,11 +138,11 @@ def readMcPAT(mcpatoutputFile):
     dynamic = re.sub(' W', '', dynamic)
     Aera = re.sub('m', '', Aera)
     Aera = Aera[:-4]
-    return (float(leakage), float(dynamic),float(Aera))
+    return (float(leakage), float(dynamic), float(Aera))
 
 
 def getTimefromStats(statsFile):
-    print ("Reading simulation time from: %s" % statsFile)
+    print("Reading simulation time from: %s" % statsFile)
     F = open(statsFile)
     ignores = re.compile(r'^---|^$')
     statLine = re.compile(r'([a-zA-Z0-9_\.:+-]+)\s+([-+]?[0-9]+\.[0-9]+|[0-9]+|nan)')
@@ -157,4 +157,3 @@ def getTimefromStats(statsFile):
                 break  # no need to parse the whole file once the requested value has been found
     F.close()
     return retVal
-

@@ -1,7 +1,7 @@
 import utils
-import space
+from utils import space
 import random
-from gem5_mcpat_evaluation import evaluation
+from utils.evaluation.gem5_mcpat_evaluation import evaluation
 
 log_file = f"./out/log/03_random.log"
 logger = utils.init_logger(log_file=log_file)

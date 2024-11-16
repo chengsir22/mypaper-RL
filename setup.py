@@ -7,13 +7,13 @@ import os
 # os.system("./gem5/build/X86/gem5.opt ./gem5/configs/deprecated/example/se.py --cmd=./gem5/tests/test-progs/hello/bin/x86/linux/hello --cpu-type=TimingSimpleCPU --num-cpus=4 --l1d_size=64kB --l1i_size=16kB --caches")
 
 # test评估模块 
-# os.system("python3 ./02-test-evaluation.py")
+os.system("python3 ./02-test-evaluation.py")
 
 # random
 # os.system("python3 ./03-random.py")
 
 # reinforce
-os.system("python3 ./04_reinforce.py")
+# os.system("python3 ./04_reinforce.py")
 
 # reinforce
 # os.system("python ./08-reinforce-ljf.py")

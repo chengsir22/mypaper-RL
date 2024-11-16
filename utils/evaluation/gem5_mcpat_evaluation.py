@@ -4,7 +4,8 @@ import math
 import time
 import pandas as pd
 import subprocess
-from getevaluation import getevaluation
+from typing import Optional
+from .getevaluation import getevaluation
 
 # sample = {
 #     "core": 4,  # 1-16
@@ -146,7 +147,7 @@ def read_csv_must(file_path):
     return dataframe
 
 
-def find_row(data, alldata, status):
+def find_row(data: pd.DataFrame, alldata: pd.DataFrame, status: dict) -> Optional[pd.Series]:
     # 将status字典转换为DataFrame中行的形式
     status_series = pd.Series(status)
 

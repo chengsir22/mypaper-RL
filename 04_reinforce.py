@@ -1,8 +1,7 @@
 import utils
-import config
-import space
+from utils import config, space
 import torch
-from gem5_mcpat_evaluation import evaluation
+from utils.evaluation.gem5_mcpat_evaluation import evaluation
 
 log_file = f"./out/log/04_reinforce.log"
 logger = utils.init_logger(log_file=log_file)
