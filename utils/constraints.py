@@ -1,19 +1,20 @@
 from math import prod
 
+
 class Constraint():
-    def __init__(self,name,threshold,threshold_ratio):
+    def __init__(self, name, threshold, threshold_ratio):
         assert threshold > 0
-        self.name =name
+        self.name = name
         self.threshold = threshold
         self.threshold_ratio = threshold_ratio
 
         self.value = 0
-        self.is_meet_flag = False 
+        self.is_meet_flag = False
 
     @property
     def margin(self):
-        return (self.threshold-self.value)/self.threshold
-    
+        return (self.threshold - self.value) / self.threshold
+
     @property
     def punishment(self):
         return (self.value / self.threshold) ** (self.threshold_ratio if self.is_meet_flag else 0)
@@ -25,21 +26,21 @@ class Constraint():
     def __str__(self):
         return (f"Constraint(name={self.name}, threshold={self.threshold}, value={self.value}, "
                 f"margin={self.margin:.2f}, is_meet={self.is_meet_flag}, punishment={self.punishment:.2f})")
-    
+
 
 class Constraints():
     def __init__(self):
         self.constraints = []
 
-    def append(self, constranit:Constraint):
+    def append(self, constranit: Constraint):
         self.constraints.append(constranit)
 
-    def update(self,values):
+    def update(self, values):
         if len(values) != len(self.constraints):
             raise ValueError("values count must match constraint count.")
-        
-        for key,value,constraint in zip(values.keys(), values.values(), self.constraints):
-            if key!=constraint.name:
+
+        for key, value, constraint in zip(values.keys(), values.values(), self.constraints):
+            if key != constraint.name:
                 raise ValueError(f"Key '{key}' does not match constraint name '{constraint.name}'.")
             constraint.update(value)
 
@@ -61,14 +62,10 @@ class Constraints():
     def print(self):
         for constraint in self.constraints:
             print(constraint)
-        
 
 
-if __name__=='__main__':
+if __name__ == '__main__':
     # 使用示例
     c = Constraint("Speed Limit", 100, 2)
     c.update(80)
     print(c)  # 输出更加友好和清晰
-
-
-
