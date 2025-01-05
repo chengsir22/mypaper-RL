@@ -2,7 +2,7 @@ import numpy
 import torch
 import random
 
-from utils.space import DesignSpace
+from simulation.space import DesignSpace
 
 
 def random_env(seed=1):
@@ -26,3 +26,7 @@ def states_normalize(space: DesignSpace, states=None):
 
 def dict_to_tensor(states):
     return torch.tensor([[value for value in states.values()]], dtype=torch.float)
+
+
+def dict_to_list_tensor(states):
+    return torch.tensor([value for value in states.values()], dtype=torch.float)

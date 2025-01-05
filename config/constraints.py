@@ -1,7 +1,7 @@
 from math import prod
 
 
-class Constraint():
+class Constraint:
     def __init__(self, name, threshold, threshold_ratio):
         assert threshold > 0
         self.name = name
@@ -17,7 +17,7 @@ class Constraint():
 
     @property
     def punishment(self):
-        return (self.value / self.threshold) ** (self.threshold_ratio if self.is_meet_flag else 0)
+        return (self.value / self.threshold) ** (0 if self.is_meet_flag else self.threshold_ratio)
 
     def update(self, value):
         self.value = value
@@ -28,7 +28,7 @@ class Constraint():
                 f"margin={self.margin:.2f}, is_meet={self.is_meet_flag}, punishment={self.punishment:.2f})")
 
 
-class Constraints():
+class Constraints:
     def __init__(self):
         self.constraints = []
 
@@ -62,6 +62,13 @@ class Constraints():
     def print(self):
         for constraint in self.constraints:
             print(constraint)
+
+    def get_threshold_list(self):
+        res = []
+        for constraint in self.constraints:
+            res.append(constraint.threshold)
+        return res
+
 
 
 if __name__ == '__main__':

@@ -13,19 +13,17 @@ class ActionDimension:
 
         assert rrange[0] < rrange[-1], "range error"
         self.rrange = rrange  # [1,16]
-        self.scale = int((rrange[-1] - rrange[0]) // step + 1)  # 16
+        self.scale = int((rrange[-1] - rrange[0]) / step + 1)  # 16
 
         self.default_value = default_value
         self.value = default_value
 
-        self.default_index = int((default_value - rrange[0]) // step)
+        self.default_index = int((default_value - rrange[0]) / step)
         self.index = self.default_index
 
-        # 最多保留一位小数
+        # 保留一位小数
         self.sample_box = [
-            round(self.rrange[0] + idx * step, 1) if round(self.rrange[0] + idx * step, 1) % 1 != 0 else int(
-                round(self.rrange[0] + idx * step, 0))
-            for idx in range(int(self.scale))
+            float(f"{self.rrange[0] + idx * step:.1f}") for idx in range(int(self.scale))
         ]
 
         logger.info(
@@ -80,8 +78,8 @@ def create_space() -> DesignSpace:
     space = DesignSpace()
 
     core = ActionDimension("core", 1, 1, [1, 16])
-    l1i_size = ActionDimension("l1i_size", 2, 1, [2, 10])
-    l1d_size = ActionDimension("l1d_size", 2, 1, [2, 10])
+    l1i_size = ActionDimension("l1i_size", 2, 1, [1, 12])
+    l1d_size = ActionDimension("l1d_size", 2, 1, [1, 12])
     l2_size = ActionDimension("l2_size", 6, 1, [6, 16])
     l1d_assoc = ActionDimension("l1d_assoc", 1, 1, [1, 4])
     l1i_assoc = ActionDimension("l1i_assoc", 1, 1, [1, 4])

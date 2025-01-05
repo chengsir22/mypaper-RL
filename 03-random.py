@@ -1,6 +1,4 @@
-import utils
 from utils import space
-import random
 from utils import *
 
 log_file = f"./out/log/03_random.log"
@@ -12,7 +10,7 @@ class Random:
         random_env()
         # init 设计空间
         self.space = space.create_space()
-        self.train_eps = 500
+        self.train_eps = 10
 
     def choose_action(self, dimension_index):
         scale = self.space.dimension_box[dimension_index].scale

@@ -1,5 +1,6 @@
 import utils
-from utils import config, space
+from utils import space
+from config import config
 import torch
 from utils.evaluation.gem5_mcpat_evaluation import evaluation
 

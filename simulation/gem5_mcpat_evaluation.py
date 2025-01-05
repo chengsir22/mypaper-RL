@@ -79,6 +79,9 @@ def evaluation(status):
         data = pd.concat([data, pd.DataFrame([row])], ignore_index=True)
         data.to_csv("./out/data/data.csv", index=False)
         logger.info(f"skip")
+        logger.info(f"{row[-3:].to_dict()}")
+        if (row[-3:] == 0.0).all():  # 判断后三列是否都是0.0
+            return None  # 如果是0.0，返回None
         return row[-3:].to_dict()
     else:
         logger.warning("No matching row found. so let's start Gem5 simulator")
@@ -107,6 +110,7 @@ def evaluation(status):
             status["power"] = 0
             logger.info(f"Evaluation failed.")
 
+        logger.info(f"{status}")
         data = pd.concat([data, pd.DataFrame([status])], ignore_index=True)
         data.to_csv(f"./out/data/data.csv", index=False)
         return metrics
@@ -114,7 +118,7 @@ def evaluation(status):
 
 def get_system_config(status):
     config = {
-        "core": str(status["core"]),
+        "core": str(int(status["core"])),
         "l1i_size": str(int(math.pow(2, int(status["l1i_size"])))),
         "l1d_size": str(int(math.pow(2, int(status["l1d_size"])))),
         "l2_size": str(int(math.pow(2, int(status["l2_size"])))),

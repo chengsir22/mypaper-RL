@@ -7,7 +7,7 @@ import os
 # os.system("./gem5/build/X86/gem5.opt ./gem5/configs/deprecated/example/se.py --cmd=./gem5/tests/test-progs/hello/bin/x86/linux/hello --cpu-type=TimingSimpleCPU --num-cpus=4 --l1d_size=64kB --l1i_size=16kB --caches")
 
 # test评估模块 
-os.system("python3 ./02-test-evaluation.py")
+# os.system("python3 ./02-test-evaluation.py")
 
 # random
 # os.system("python3 ./03-random.py")
@@ -15,9 +15,29 @@ os.system("python3 ./02-test-evaluation.py")
 # reinforce
 # os.system("python3 ./04_reinforce.py")
 
-# reinforce
-# os.system("python ./08-reinforce-ljf.py")
+# dqn
+# os.system("python3 ./05-dqn.py")
 
+# a2c
+# os.system("python3 ./06-Actor-Critic.py")
+
+# IPPO
+# os.system("python3 ./07-IPPO.py")
+
+# os.system("python3 ./08-MAPPO.py")
+
+# os.system("python3 ./09-MAPPO_PER.py")
 
 # dqn
 # os.system("python ./09-dqn.py")
+
+
+# os.system("python ./10-PPO-TDM.py")
+
+os.system("python ./11-MARDSE.py")
+
+# os.system("python ./12-MAPPO-SIL.py")
+
+# os.system("python ./13-PPO.py")
+
+# os.system("python ./14-MAPPO.py")
